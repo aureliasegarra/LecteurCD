@@ -1,13 +1,12 @@
-[![Front](https://img.shields.io/badge/DesignPattern-pubsub-green?style=flat)](https://)
-[![Front](https://img.shields.io/badge/Language-Javascript-f5e11b?style=flat)](https://)
-[![Front](https://img.shields.io/badge/Development-TDD-blue?style=flat)](https://)
-[![Front](https://img.shields.io/badge/Context-TestTechnique-red?style=flat)](https://)
+[![Front](https://img.shields.io/badge/Context-TP-green?style=flat)](https://)
+[![Front](https://img.shields.io/badge/Language-Java-f5e11b?style=flat)](https://)
+[![Front](https://img.shields.io/badge/Formation-LicencePro-red?style=flat)](https://)
 
 
 
 <br/>
 <div align="center">
-    <img src="pubsub.png" alt="Logo">
+    <img src="images/cd-player.png" alt="Logo" width="20%">
     <br/>
     <br/>
     <h1 align="center">TP Java</h1>
