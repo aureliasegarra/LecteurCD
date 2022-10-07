@@ -1,6 +1,6 @@
+[![Front](https://img.shields.io/badge/Formation-LicencePro-blue?style=flat)](https://)
 [![Front](https://img.shields.io/badge/Context-TP-green?style=flat)](https://)
-[![Front](https://img.shields.io/badge/Language-Java-f5e11b?style=flat)](https://)
-[![Front](https://img.shields.io/badge/Formation-LicencePro-red?style=flat)](https://)
+[![Front](https://img.shields.io/badge/Language-Java-DD448B?style=flat)](https://)
 
 
 
@@ -42,7 +42,7 @@
 
 
 ## ✨ Illustrations <a id="illustrations"></a>
-![illustration](src/main/resources/images/screenshot1.png)
+...
 
 
 ## 🗒 Description <a id="description"></a>
@@ -68,16 +68,16 @@ L'application graphique, volontairement simple, permet à l'utilisateur d'effect
 - Clean architecture
 
 ## ➡️ Diagramme UML <a id="uml"></a>
-
+![illustration](images/uml.png)
 
 
 
 ## 📈 Statut <a id="statut"></a>
 
-TP en cours de réalisation
+Application en cours de réalisation
 
 
 ## 🗓 Contexte <a id="contexte"> </a>
 
-Ce TP est réalisé lors de ma licence pro DLIS (IUT Vannes)
+Cette application est réalisée lors de ma licence pro DLIS (IUT Vannes)
 
