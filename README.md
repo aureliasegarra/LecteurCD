@@ -68,7 +68,8 @@ L'application graphique, volontairement simple, permet à l'utilisateur d'effect
 - Clean architecture
 
 ## ➡️ Diagramme UML <a id="uml"></a>
-![illustration](images/uml.png)
+<img src="images/uml.png" alt="Logo" width="1370">
+
 
 
 
