@@ -9,13 +9,12 @@
     <img src="images/cd-player.png" alt="Logo" width="20%">
     <br/>
     <br/>
-    <h1 align="center">TP Java</h1>
+    <h1 align="center">Java App</h1>
 </div>
-  <p align="center">
-    Simulation graphique du fonctionnement d'un lecteur de CDs 
-    <br />(Licence Pro DLIS)
-    <br />
-  </p>
+  <h3 align="center">
+    Graphical simulation of a CD player
+  </h3>
+<br/>
 
 
 <br/>
@@ -26,13 +25,13 @@
   <summary>Table of Contents</summary>
 
   <ol>
-    <li><a href="#illustrations">Illustration</a></li>
+    <li><a href="#illustration">Illustration</a></li>
     <li><a href="#description">Description</a></li>
-    <li><a href="#langages">Langages et outils</a></li>
-    <li><a href="#objectifs">Objectifs</a></li>
-    <li><a href="#uml">Diagramme UML</a></li>
-    <li><a href="#statut">Statut</a></li>
-    <li><a href="#contexte">Contexte</a></li>
+    <li><a href="#langages">Languages</a></li>
+    <li><a href="#objectifs">Objectives</a></li>
+    <li><a href="#uml">UML diagram</a></li>
+    <li><a href="#statut">Status</a></li>
+    <li><a href="#contexte">Context</a></li>
   </ol>
 </details>
 
@@ -41,44 +40,43 @@
 
 
 
-## ✨ Illustrations <a id="illustrations"></a>
+## ✨ Illustration <a id="illustration"></a>
 ...
 
 
 ## 🗒 Description <a id="description"></a>
-Cette application Java simule visuellement le fonctionnement d'un lecteur CD. 
-L'application graphique, volontairement simple, permet à l'utilisateur d'effectuer les opérations suivantes :
-- chargement d'un CD dans le lecteur
-- lecture du CD depuis le début
-- arrêt de la lecture
-- passage au morceau suivant
-- passage au morceau précédent
+This Java application visually simulates the operation of a CD player.
+The graphical interface, intentionally simple, allows the user to perform the following operations:
+- loading a CD into the player
+- play the CD from the beginning
+- stop playing
+- skip to next track
+- skip to previous track
 
 
-## 🛠 Langages/Outils <a id="langages"></a>
+## 🛠 Languages <a id="langages"></a>
 - Java
 
 
-## 🎯 Objectifs <a id="objectifs"></a>
-- Organisation du code en Package
-- Respect des règles de style Java
-- Ecriture d'une documentation embarquée JavaDoc
-- Modèle MVC
-- Règles de visibilité (public, private, package, protected)
+## 🎯 Objectives <a id="objectifs"></a>
+- Organisation in Package
+- Respect of Java style rules
+- Writing of JavaDoc
+- MVC model
+- Rules of visibility(public, private, package, protected)
 - Clean architecture
 
-## ➡️ Diagramme UML <a id="uml"></a>
-<img src="images/uml.png" alt="Logo" width="1370">
+## ➡️ UML diagram <a id="uml"></a>
+<img src="images/uml.png" alt="Logo" width="80%">
 
 
 
 
-## 📈 Statut <a id="statut"></a>
+## 📈 Status <a id="statut"></a>
 
-Application en cours de réalisation
+Work in progress ...
 
 
-## 🗓 Contexte <a id="contexte"> </a>
+## 🗓 Context <a id="contexte"> </a>
 
-Cette application est réalisée lors de ma licence pro DLIS (IUT Vannes)
-
+I realized this application during my bachelor of computer science in the Institute of technology (Vannes)
