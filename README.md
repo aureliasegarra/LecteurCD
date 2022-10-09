@@ -67,7 +67,7 @@ The graphical interface, intentionally simple, allows the user to perform the fo
 - Clean architecture
 
 ## ➡️ UML diagram <a id="uml"></a>
-<img src="images/uml.png" alt="Logo" width="80%">
+<img src="images/uml-diagram.png" alt="Logo" width="80%">
 
 
 
