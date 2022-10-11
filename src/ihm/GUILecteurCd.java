@@ -130,6 +130,11 @@ public class GUILecteurCd extends JFrame {
     // ***** GETTERS *****
     // *******************
 
+
+    public LecteurCd getLeLecteur() {
+        return leLecteur;
+    }
+
     public JButton getButtonPlay() {
         return buttonPlay;
     }
