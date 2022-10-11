@@ -74,9 +74,9 @@ public class Duree {
      * Method that compares the current duration and another duration
      * @param autreDuree Duration to compare to the current duration
      * @return an integer that takes the following values :
-     *          <ul><li> -1 : if current duration < autreDuree
-     *              <li> 0 : if current duration = autreDuree
-     *              <li> 1 : if current duration > autreDuree
+     *          <ul><li> -1 : if current duration inf autreDuree</li>
+     *              <li> 0 : if current duration equals to autreDuree</li>
+     *              <li> 1 : if current duration sup autreDuree</li>
      *          </ul>
      */
     public int compareA(Duree autreDuree){
@@ -132,11 +132,11 @@ public class Duree {
      * Method that returns the current duration as a string
      * @param mode -The string format depends on the selected "mode" (given in parameter)
      * <ul>
-*    *      <li> if mode == 'J' => "JJJ jours HH h"
-     *      <li> if mode == 'H' => "HHH:MM:SS"
-     *      <li> if mode == 'S' => "SSS.MMM sec"
-     *      <li> if mode == 'M' => "MMMMMM millisec"
-*    * </ul>
+     *      <li> if mode == 'J' => "JJJ jours HH h"</li>
+     *      <li> if mode == 'H' => "HHH:MM:SS"</li>
+     *      <li> if mode == 'S' => "SSS.MMM sec"</li>
+     *      <li> if mode == 'M' => "MMMMMM millisec"</li>
+     * </ul>
      * @return the duration as a string
      */
     public String enTexte(char mode){

@@ -39,7 +39,7 @@ public class Plagecd {
      * @return duration (⚠️type Duree)
      */
     public Duree getLaDuree(){
-        return laDuree;
+        return this.laDuree;
     }
 
     /**
@@ -61,10 +61,10 @@ public class Plagecd {
     /**
      * Method giving the complete description of the track :
      * <ul>
-     *     <li>Description
-     *     <li>Title
-     *     <li>Interpreter
-     *     <li>Duration
+     *     <li>Description</li>
+     *     <li>Title</li>
+     *     <li>Interpreter</li>
+     *     <li>Duration</li>
      * </ul>
      * @return this description
      */

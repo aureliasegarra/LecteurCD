@@ -19,7 +19,7 @@ public class LecteurCd {
     private boolean estCharge;
 
     /**
-     * Index of the current track (1 <= index <= nbrPlages ou zero)
+     * Index of the current track (1 inf or equals INDEX inf or equals to nbrPlages or zero)
      */
     private int indexPlage;
 
@@ -66,7 +66,7 @@ public class LecteurCd {
 
     /**
      * GETTER
-     * 1 <=Index < nbrPlages
+     * 1 inf or equals INDEX inf or equals to nbrPlages
      * @return index of the current track (0 if no CD loaded)
      */
     public int getIndexCourant(){
@@ -130,6 +130,7 @@ public class LecteurCd {
     /**
      * METHOD
      * Should load a CD into the player. the CD is created from a text file
+     * @param leFich - Name of the file to read
      */
     public void chargerUnCD(String leFich){
         leCDCourant = new Cd(leFich);
