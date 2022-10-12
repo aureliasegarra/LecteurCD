@@ -124,7 +124,7 @@ public class Cd {
             String ligne;
 
             while((ligne = tampon.readLine()) != null){
-
+                //System.out.println(ligne);
                 mesLignes = ligne.split("/");
                 int min =  Integer.parseInt(mesLignes[2]);
                 int sec = Integer.parseInt(mesLignes[3]);

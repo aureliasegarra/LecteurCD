@@ -4,7 +4,9 @@ import control.Ecouteur;
 import datas.LecteurCd;
 
 import javax.swing.*;
+import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.*;
+import java.io.IOException;
 
 
 public class GUILecteurCd extends JFrame {
@@ -16,7 +18,7 @@ public class GUILecteurCd extends JFrame {
     private final JButton buttonStop = new JButton("STOP");
     private final JButton buttonNext = new JButton("NEXT");
     private final JButton buttonPrevious = new JButton("PREVIOUS");
-    private final JButton buttonChargerCD = new JButton("Charger un CD");
+    private final JButton buttonChargerCD = new JButton("Charger le CD - OFF");
 
     private final JTextField tempsTotal = new JTextField("");
     private final JTextField nbPlages = new JTextField("");
@@ -30,7 +32,7 @@ public class GUILecteurCd extends JFrame {
 
     public GUILecteurCd(String title){
         super(title);
-        LecteurCd leLecteur = new LecteurCd();
+        this.leLecteur = new LecteurCd();
         graphicLayout();
         addListeners();
         setSize(800,400);
@@ -140,7 +142,7 @@ public class GUILecteurCd extends JFrame {
     // *******************
 
 
-    public LecteurCd getLeLecteur() { return leLecteur; }
+    public LecteurCd getLeLecteur() { return this.leLecteur; }
 
     public JButton getButtonPlay() {
         return buttonPlay;
@@ -186,7 +188,7 @@ public class GUILecteurCd extends JFrame {
         return image;
     }
 
-    public JLabel getjImage() {
+    public JLabel getJImage() {
         return jImage;
     }
 
@@ -208,7 +210,7 @@ public class GUILecteurCd extends JFrame {
 
     public void setImage(ImageIcon image) { this.image = image; }
 
-    public void setTempsTot(String temps){
+    public void setTempsTotal(String temps){
         tempsTotal.setText(temps);
     }
 
@@ -234,8 +236,8 @@ public class GUILecteurCd extends JFrame {
     // *******************
 
 
-    public static void main(String[] args) throws UnsupportedLookAndFeelException {
-
+    public static void main(String[] args) throws UnsupportedLookAndFeelException, IOException {
+        UIManager.setLookAndFeel(new NimbusLookAndFeel());
         GUILecteurCd app = new GUILecteurCd("CD Player");
 
     }
