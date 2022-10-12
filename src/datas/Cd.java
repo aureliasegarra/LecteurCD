@@ -49,7 +49,7 @@ public class Cd {
      *     <li>CD title and interpreter</li>
      *     <li>The different tracks as follow  TitrePlage/ InterpretePlage/ X min/ Y sec</li>
      * </ul>
-     * The private method "graverCD (String leFich)" read the text file
+     * The private method "graverCD (String drDre)" read the text file
      * @param leFich The text file
      */
     public Cd(String leFich){
@@ -151,10 +151,10 @@ public class Cd {
      * Simplified version with tracks created and added to the CD
      */
     private void graverCD(){
-        Plagecd plage1 = new Plagecd(new Duree(180000),"TNT","ACDC");
-        Plagecd plage2 = new Plagecd(new Duree(360000),"Don't Speak","No Doubt");
-        Plagecd plage3 = new Plagecd(new Duree(350500),"Stairway to Heaven","LedZep");
-        Plagecd plage4 = new Plagecd(new Duree(420000),"Bohemian Rhapsody","Queen");
+        Plagecd plage1 = new Plagecd(new Duree(84000),"Lolo","Dr.Dre");
+        Plagecd plage2 = new Plagecd(new Duree(195600),"The Watcher","Dr.Dre");
+        Plagecd plage3 = new Plagecd(new Duree(195000),"Fuck You","Dr.Dre");
+        Plagecd plage4 = new Plagecd(new Duree(258000),"Still D.R.E.","Dr.Dre");
 
         lesPlages.add(plage1);
         lesPlages.add(plage2);

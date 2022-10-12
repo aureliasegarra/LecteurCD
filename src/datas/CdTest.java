@@ -15,7 +15,7 @@ public class CdTest {
         System.out.println("***Test de la méthode getDureeTotal())***");
         testGetDureeTotal();
 
-        //Test de la méthode graverCD(leFich)
+        //Test de la méthode graverCD(drDre)
         System.out.println("***Test de la méthode graverCD(leFich))***");
         testGraverCDFichier();
 
@@ -80,9 +80,9 @@ public class CdTest {
 
     public static void testGraverCDFichier(){
 
-        Cd cd = new Cd("ACDC.txt");
+        Cd cd = new Cd("drDre.txt");
 
-        if((cd.getLeTitre().equals("Back in Black")) && (cd.getLInterpreteCD().equals("ACDC"))){
+        if((cd.getLeTitre().equals("Chronic 2001")) && (cd.getLInterpreteCD().equals("Dr.Dre"))){
             System.out.println("Test OK");
         }
         else{

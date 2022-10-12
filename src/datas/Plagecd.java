@@ -9,17 +9,17 @@ public class Plagecd {
     /**
      * Track duration
      */
-    private Duree laDuree;
+    private final Duree laDuree;
 
     /**
      * Track title
      */
-    private String leTitre;
+    private final String leTitre;
 
     /**
      * Track interpreter
      */
-    private String lInterprete;
+    private final String lInterprete;
 
 
     /**

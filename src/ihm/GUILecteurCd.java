@@ -1,9 +1,9 @@
 package ihm;
 
+import control.Ecouteur;
 import datas.LecteurCd;
 
 import javax.swing.*;
-import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.*;
 
 
@@ -11,7 +11,7 @@ public class GUILecteurCd extends JFrame {
 
     private LecteurCd leLecteur;
 
-    // ALL fields and button in attribute
+    // All widgets in attribute
     private final JButton buttonPlay = new JButton("PLAY");
     private final JButton buttonStop = new JButton("STOP");
     private final JButton buttonNext = new JButton("NEXT");
@@ -32,6 +32,7 @@ public class GUILecteurCd extends JFrame {
         super(title);
         LecteurCd leLecteur = new LecteurCd();
         graphicLayout();
+        addListeners();
         setSize(800,400);
         setVisible(true);
         setTitle(title);
@@ -40,14 +41,14 @@ public class GUILecteurCd extends JFrame {
         setLocationRelativeTo(null);
     }
 
-    /*private void addListeners(){
-        //écouter d'actions de souris
+    private void addListeners(){
+        // Listen to click mouse
         this.buttonPlay.addActionListener(new Ecouteur(this));
         this.buttonStop.addActionListener(new Ecouteur(this));
         this.buttonNext.addActionListener(new Ecouteur(this));
         this.buttonPrevious.addActionListener(new Ecouteur(this));
         this.buttonChargerCD.addActionListener(new Ecouteur(this));
-    }*/
+    }
 
     public void graphicLayout(){
         this.setLayout(new GridLayout(1, 3));
@@ -55,23 +56,16 @@ public class GUILecteurCd extends JFrame {
         this.add(rightLayout());
     }
 
+    // *********************
+    // ***** LEFT SIDE *****
+    // *********************
+
     private JPanel leftLayout() {
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(3,2));
         panel.add(upSide());
         panel.add(middleSide());
         panel.add(downSide());
-
-        return panel;
-    }
-
-    private JPanel rightLayout(){
-        JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(1,1));
-        image = new ImageIcon("images/equalizer.jpg");
-        ImageIcon icon = new ImageIcon(image.getImage().getScaledInstance(400, 400, Image.SCALE_DEFAULT));
-        jImage = new JLabel(icon);
-        panel.add(jImage);
 
         return panel;
     }
@@ -126,14 +120,27 @@ public class GUILecteurCd extends JFrame {
     }
 
 
+    // ***********************
+    // ***** RIGHT SIDE ******
+    // ***********************
+
+    private JPanel rightLayout(){
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(1,1));
+        image = new ImageIcon("images/equalizer.jpg");
+        ImageIcon icon = new ImageIcon(image.getImage().getScaledInstance(400, 400, Image.SCALE_DEFAULT));
+        jImage = new JLabel(icon);
+        panel.add(jImage);
+
+        return panel;
+    }
+
     // *******************
     // ***** GETTERS *****
     // *******************
 
 
-    public LecteurCd getLeLecteur() {
-        return leLecteur;
-    }
+    public LecteurCd getLeLecteur() { return leLecteur; }
 
     public JButton getButtonPlay() {
         return buttonPlay;
@@ -188,7 +195,9 @@ public class GUILecteurCd extends JFrame {
     // ***** SETTERS *****
     // *******************
 
-    public void setButton(){
+
+
+    public void setButtonChargerCD(){
         if(leLecteur.estCharge()){
             buttonChargerCD.setText("Retirer le CD");
         }
