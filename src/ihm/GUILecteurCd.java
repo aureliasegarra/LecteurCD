@@ -11,14 +11,14 @@ import java.io.IOException;
 
 public class GUILecteurCd extends JFrame {
 
-    private LecteurCd leLecteur;
+    private final LecteurCd leLecteur;
 
     // All widgets in attribute
-    private final JButton buttonPlay = new JButton("PLAY");
-    private final JButton buttonStop = new JButton("STOP");
-    private final JButton buttonNext = new JButton("NEXT");
-    private final JButton buttonPrevious = new JButton("PREVIOUS");
-    private final JButton buttonChargerCD = new JButton("Charger le CD - OFF");
+    private final JButton buttonPlay = new JButton();
+    private final JButton buttonStop = new JButton();
+    private final JButton buttonNext = new JButton();
+    private final JButton buttonPrevious = new JButton();
+    private final JButton buttonChargerCD = new JButton("Charger le CD");
 
     private final JTextField tempsTotal = new JTextField("");
     private final JTextField nbPlages = new JTextField("");
@@ -35,7 +35,7 @@ public class GUILecteurCd extends JFrame {
         this.leLecteur = new LecteurCd();
         graphicLayout();
         addListeners();
-        setSize(800,400);
+        setSize(600,800);
         setVisible(true);
         setTitle(title);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -53,16 +53,16 @@ public class GUILecteurCd extends JFrame {
     }
 
     public void graphicLayout(){
-        this.setLayout(new GridLayout(1, 3));
-        this.add(leftLayout());
-        this.add(rightLayout());
+        this.setLayout(new GridLayout(2, 1));
+        this.add(up());
+        this.add(down());
     }
 
     // *********************
-    // ***** LEFT SIDE *****
+    // ***** DOWN *****
     // *********************
 
-    private JPanel leftLayout() {
+    private JPanel down() {
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(3,2));
         panel.add(upSide());
@@ -85,17 +85,6 @@ public class GUILecteurCd extends JFrame {
         return panel;
     }
 
-    private JPanel downSide(){
-        JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(1,4));
-        panel.add(buttonStop);
-        panel.add(buttonPlay);
-        panel.add(buttonNext);
-        panel.add(buttonPrevious);
-
-        return panel;
-    }
-
     private JPanel middleSide(){
         JPanel panel = new JPanel();
         panel.setLayout(new BorderLayout());
@@ -109,9 +98,9 @@ public class GUILecteurCd extends JFrame {
 
         /* Modification de la couleur de fond des fenêtres*/
 
-        plageCourante.setBackground(Color.GRAY);
-        dureePlageCourante.setBackground(Color.GRAY);
-        infoTrack.setBackground(Color.GRAY);
+        plageCourante.setBackground(Color.WHITE);
+        dureePlageCourante.setBackground(Color.WHITE);
+        infoTrack.setBackground(Color.WHITE);
 
         /* Texte des fenêtres centrées*/
         plageCourante.setHorizontalAlignment(JTextField.CENTER);
@@ -121,15 +110,40 @@ public class GUILecteurCd extends JFrame {
         return panel;
     }
 
+    private JPanel downSide(){
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(1,4));
+
+        ImageIcon icon1 = new ImageIcon("images/play.png");
+        buttonPlay.setIcon(icon1);
+        ImageIcon icon2 = new ImageIcon("images/next.png");
+        buttonNext.setIcon(icon2);
+        ImageIcon icon3 = new ImageIcon("images/previous.png");
+        buttonPrevious.setIcon(icon3);
+        ImageIcon icon4 = new ImageIcon("images/stop.png");
+        buttonStop.setIcon(icon4);
+
+
+        panel.add(buttonStop);
+        panel.add(buttonPrevious);
+        panel.add(buttonPlay);
+        panel.add(buttonNext);
+
+
+        return panel;
+    }
+
+
+
 
     // ***********************
-    // ***** RIGHT SIDE ******
+    // ***** UP ******
     // ***********************
 
-    private JPanel rightLayout(){
+    private JPanel up(){
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(1,1));
-        image = new ImageIcon("images/equalizer.jpg");
+        image = new ImageIcon("images/illustration.jpg");
         ImageIcon icon = new ImageIcon(image.getImage().getScaledInstance(400, 400, Image.SCALE_DEFAULT));
         jImage = new JLabel(icon);
         panel.add(jImage);
@@ -208,7 +222,17 @@ public class GUILecteurCd extends JFrame {
         }
     }
 
-    public void setImage(ImageIcon image) { this.image = image; }
+    public void setImage(String fichier) {
+        if (this.leLecteur.estCharge()){
+            ImageIcon cdCover = new ImageIcon(fichier);
+            ImageIcon imageResized = new ImageIcon(cdCover.getImage().getScaledInstance(380, 380, Image.SCALE_DEFAULT));
+            jImage.setIcon(imageResized);
+        } else {
+            image = new ImageIcon("images/illustration.jpg");
+            ImageIcon icon = new ImageIcon(image.getImage().getScaledInstance(380, 380, Image.SCALE_DEFAULT));
+            jImage.setIcon(icon);
+        }
+    }
 
     public void setTempsTotal(String temps){
         tempsTotal.setText(temps);

@@ -31,9 +31,22 @@ public class Ecouteur implements ActionListener {
                     String nomFichier = fichierAudio.toString();
                     this.lecteur.getLeLecteur().chargerUnCD(nomFichier);
                 }
+                this.lecteur.setImage("images/drDre.jpeg");
                 this.lecteur.setButtonChargerCD();
-                this.lecteur.setNbPlages(String.valueOf(this.lecteur.getLeLecteur().getNbrPlages()));
+                this.lecteur.setNbPlages(valueOf(this.lecteur.getLeLecteur().getNbrPlages()));
                 this.lecteur.setTempsTotal(this.lecteur.getLeLecteur().getTempsTotal());
+            }
+            else {
+                lecteur.getLeLecteur().setDecharger();
+                lecteur.setImage("images/illustration.jpg");
+                lecteur.setButtonChargerCD();
+
+                // Update display fields
+                lecteur.setTempsTotal(null);
+                lecteur.setNbPlages(null);
+                lecteur.setPlageCourante(null);
+                lecteur.setInfoTrack(null);
+                lecteur.setDureePlageCourante(null);
             }
         }
 
