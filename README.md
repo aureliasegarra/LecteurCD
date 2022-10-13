@@ -57,6 +57,7 @@ The graphical interface, intentionally simple, allows the user to perform the fo
 
 ## 🛠 Languages <a id="langages"></a>
 - Java
+- Swing
 
 
 ## 🎯 Objectives <a id="objectifs"></a>
