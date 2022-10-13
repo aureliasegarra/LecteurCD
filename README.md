@@ -30,6 +30,7 @@
     <li><a href="#langages">Languages</a></li>
     <li><a href="#objectifs">Objectives</a></li>
     <li><a href="#uml">UML diagram</a></li>
+    <li><a href="#setup">Setup</a></li>
     <li><a href="#statut">Status</a></li>
     <li><a href="#contexte">Context</a></li>
   </ol>
@@ -41,7 +42,7 @@
 
 
 ## ✨ Illustration <a id="illustration"></a>
-...
+<img src="images/sreenshot.png" alt="Logo" width="80%">
 
 
 ## 🗒 Description <a id="description"></a>
@@ -69,12 +70,17 @@ The graphical interface, intentionally simple, allows the user to perform the fo
 ## ➡️ UML diagram <a id="uml"></a>
 <img src="images/uml-diagram.png" alt="Logo" width="80%">
 
-
+## ⚙️ Setup <a id="setup"></a>
+Pour lancer l'affichage du lecteur, se positionner dans le répertoire ws
+```java
+javac -d ../class ../src/ihm/GUILecteurCd.java ../src/control/Ecouteur.java ../src/datas/*.java
+java ihm/GUILecteurCd
+```
 
 
 ## 📈 Status <a id="statut"></a>
 
-Work in progress ...
+Project completed
 
 
 ## 🗓 Context <a id="contexte"> </a>

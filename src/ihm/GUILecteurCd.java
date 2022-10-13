@@ -18,7 +18,7 @@ public class GUILecteurCd extends JFrame {
     private final JButton buttonStop = new JButton();
     private final JButton buttonNext = new JButton();
     private final JButton buttonPrevious = new JButton();
-    private final JButton buttonChargerCD = new JButton("Charger le CD");
+    private final JButton buttonChargerCD = new JButton("Charger un CD");
 
     private final JTextField tempsTotal = new JTextField("");
     private final JTextField nbPlages = new JTextField("");
@@ -92,17 +92,16 @@ public class GUILecteurCd extends JFrame {
         panel.add(infoTrack, BorderLayout.CENTER);
         panel.add(dureePlageCourante, BorderLayout.EAST);
 
-        /* Modification de la taille des fenêtres*/
+        // Update window size
         plageCourante.setPreferredSize(new Dimension(50,100));
         dureePlageCourante.setPreferredSize(new Dimension(100,100));
 
-        /* Modification de la couleur de fond des fenêtres*/
-
+        // Update window background color
         plageCourante.setBackground(Color.WHITE);
         dureePlageCourante.setBackground(Color.WHITE);
         infoTrack.setBackground(Color.WHITE);
 
-        /* Texte des fenêtres centrées*/
+        // Update text alignment
         plageCourante.setHorizontalAlignment(JTextField.CENTER);
         dureePlageCourante.setHorizontalAlignment(JTextField.CENTER);
         infoTrack.setHorizontalAlignment(JTextField.CENTER);
@@ -132,7 +131,6 @@ public class GUILecteurCd extends JFrame {
 
         return panel;
     }
-
 
 
 
@@ -178,40 +176,11 @@ public class GUILecteurCd extends JFrame {
         return buttonChargerCD;
     }
 
-    public JTextField getTempsTotal() {
-        return tempsTotal;
-    }
-
-    public JTextField getNbPlages() {
-        return nbPlages;
-    }
-
-    public JTextField getPlageCourante() {
-        return plageCourante;
-    }
-
-    public JTextField getInfoTrack() {
-        return infoTrack;
-    }
-
-    public JTextField getDureePlageCourante() {
-        return dureePlageCourante;
-    }
-
-    public ImageIcon getImage() {
-        return image;
-    }
-
-    public JLabel getJImage() {
-        return jImage;
-    }
 
 
     // *******************
     // ***** SETTERS *****
     // *******************
-
-
 
     public void setButtonChargerCD(){
         if(leLecteur.estCharge()){
